@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies</title>
+</head>
+
+<body>
+  <form class="form" action="">
+    <input id="title" type="text" placeholder="Title" >
+    <input id="rating" type="text" placeholder="Rating">
+    <button id="submit-btn">Submit</button>
+  </form>
+
+  <div id="rated-movies"></div>
+
+  <script src="https://unpkg.com/jquery"></script>
+  <script>
+    // TODO: put JS in different file
+
+    function appendInputs() {
+      event.preventDefault();
+
+      let $titleInput = $("#title").val();
+      let $ratingInput = $("#rating").val();
+
+      let $title = $("<p>").text(`Title: ${$titleInput}`);
+      let $rating = $("<p>").text(`Rating: ${$ratingInput}`);
+      let $removeButton = $("<button>")
+        .text("Remove")
+        .addClass("remove-btn");
+
+      let $movieRating = $("<div>").append($title, $rating, $removeButton);
+      $("#rated-movies").append($movieRating);
+
+      $("#rated-movies").on("click", ".remove-btn", removeMovieRating);
+    }
+
+    function removeMovieRating (evt) {
+      event.preventDefault();
+      // TODO: research closest()
+      $(evt.target).parent().remove();
+    }
+
+    $("#submit-btn").on("click", appendInputs);
+
+  </script>
+</body>
+
+</html>
