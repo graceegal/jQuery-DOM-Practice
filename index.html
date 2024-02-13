@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link rel="stylesheet"
-        href="https://unpkg.com/bootstrap@5/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@5/dist/css/bootstrap.css">
   <style>
-
     img {
       max-width: 70%;
     }
@@ -15,67 +14,118 @@
       display: block;
       margin: 10px auto;
     }
-
   </style>
 </head>
 
 <body>
-<div class="container">
-  <h1 id="title" class="text-center">Welcome to my website.</h1>
-  <div class="row">
-    <article class="col-sm-8">
-      <p>My website is very important because I have many important things
-        to say. Here is a picture of a puppy in a cup: </p>
-      <img src="pup-in-cup.jpg" alt="Puppy in Cup">
-      <p>Here are some more thoughts: Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Cum harum labore veritatis, possimus
-        facilis quas repellat, explicabo, ad commodi ipsum quidem nostrum
-        earum pariatur fugit! Magni sunt nulla impedit! Facilis.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, natus
-        qui nostrum libero atque hic distinctio sint facilis nihil possimus
-        tenetur deserunt rerum laboriosam cum quisuam doloremque ducimus
-        error.</p>
-      <p>Rerum debitis aspernatur, ipsum animi! Quis ullam dolore blanditiis
-        accusantium eius minus tempore, iure maxime similique vel! Possimus
-        reprehenderit autem, recusandae quos laudantium nesciunt libero suscipit
-        officia rerum, et.</p>
-      <p>Aliquam harum at soluta id esse perspiciatis, nesciunt corporis nostrum
-        commodi, dolorum, repellat possimus a cumque. Id sed explicabo, quaerat
-        sit esse facere, voluptatem, odit nesciunt eveniet assumenda, error!</p>
-      <p>Consequuntur porro, nobis placeat, labore magni aliquam repellendus
-        consequatur hic facere, molestiae dolorum suscipit quos sint, minima
-        Quibusdam voluptatem est hic, corporis. Officiis delectus, consectetur
-        harum reiciendis perferendis.</p>
-    </article>
-    <aside class="col-sm-4">
-      <h4>I love lists. Here's why.</h4>
-      <ol>
-        <li>Sometimes they're numbered, and numbers are great.</li>
-        <li>Sometimes they're not, and that's okay too.</li>
-        <li>I don't have the attention span to read paragraphs.</li>
-        <li>Hey look, there's a puppy!</li>
-      </ol>
-    </aside>
+  <div class="container">
+    <h1 id="title" class="text-center">Welcome to my website.</h1>
+    <div class="row">
+      <article class="col-sm-8">
+        <p>My website is very important because I have many important things
+          to say. Here is a picture of a puppy in a cup: </p>
+        <img src="pup-in-cup.jpg" alt="Puppy in Cup">
+        <p>Here are some more thoughts: Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Cum harum labore veritatis, possimus
+          facilis quas repellat, explicabo, ad commodi ipsum quidem nostrum
+          earum pariatur fugit! Magni sunt nulla impedit! Facilis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, natus
+          qui nostrum libero atque hic distinctio sint facilis nihil possimus
+          tenetur deserunt rerum laboriosam cum quisuam doloremque ducimus
+          error.</p>
+        <p>Rerum debitis aspernatur, ipsum animi! Quis ullam dolore blanditiis
+          accusantium eius minus tempore, iure maxime similique vel! Possimus
+          reprehenderit autem, recusandae quos laudantium nesciunt libero suscipit
+          officia rerum, et.</p>
+        <p>Aliquam harum at soluta id esse perspiciatis, nesciunt corporis nostrum
+          commodi, dolorum, repellat possimus a cumque. Id sed explicabo, quaerat
+          sit esse facere, voluptatem, odit nesciunt eveniet assumenda, error!</p>
+        <p>Consequuntur porro, nobis placeat, labore magni aliquam repellendus
+          consequatur hic facere, molestiae dolorum suscipit quos sint, minima
+          Quibusdam voluptatem est hic, corporis. Officiis delectus, consectetur
+          harum reiciendis perferendis.</p>
+      </article>
+      <aside class="col-sm-4">
+        <h4>I love lists. Here's why.</h4>
+        <ol>
+          <li>Sometimes they're numbered, and numbers are great.</li>
+          <li>Sometimes they're not, and that's okay too.</li>
+          <li>I don't have the attention span to read paragraphs.</li>
+          <li>Hey look, there's a puppy!</li>
+        </ol>
+      </aside>
+    </div>
+    <div class="row mb-5">
+      <div class="col-sm-4">
+        Red
+        <input class="form-control" type="number" min="0" max="255" value="255">
+      </div>
+      <div class="col-sm-4">
+        Blue
+        <input class="form-control" type="number" min="0" max="255" value="255">
+      </div>
+      <div class="col-sm-4">
+        Green
+        <input class="form-control" type="number" min="0" max="255" value="255">
+      </div>
+    </div>
   </div>
-  <div class="row mb-5">
-    <div class="col-sm-4">
-      Red
-      <input class="form-control" type="number" min="0" max="255" value="255">
-    </div>
-    <div class="col-sm-4">
-      Blue
-      <input class="form-control" type="number" min="0" max="255" value="255">
-    </div>
-    <div class="col-sm-4">
-      Green
-      <input class="form-control" type="number" min="0" max="255" value="255">
-    </div>
-  </div>
-</div>
-<script src="https://unpkg.com/jquery"></script>
-<script>
-  // Add your code here!
-</script>
+  <script src="https://unpkg.com/jquery"></script>
+  <script>
+    // Add your code here!
+    "use strict";
+    //1
+    let $imgs = $("article img");
+    $imgs.addClass("image-center");
+
+    //2
+    //let $lastParagraph = $("article p").eq(-1);
+    let $lastParagraph = $("article p:last-child");
+    $lastParagraph.remove();
+
+    //3
+    let $title = $("#title");
+    function randomNumber() {
+      return Math.random() * 100;
+    }
+    $title.css("font-size", `${randomNumber()}px`);
+
+    //4
+    let $list = $("ol");
+    let $newListItem = $("<li>");
+    $newListItem.text("jQuery is super fun!");
+    //$list.append($newListItem);
+    $list.append("<li>", {text: "jQuery is super fun!"});
+
+    //5
+    let $aside = $("aside");
+    let $newParagraph = $("<p>Lists are silly.</p>");
+    $aside
+      .empty()
+      .append($newParagraph);
+
+    //6
+
+    let $body = $("body");
+    let $input = $("input");
+
+    function changeBackgroundColor() {
+      let $redInputNumber = Number($input.eq(0).val());
+      let $blueInputNumber = Number($input.eq(1).val());
+      let $greenInputNumber = Number($input.eq(2).val());
+
+      return $body.css("background-color", `rgb(${$redInputNumber},
+      ${$blueInputNumber}, ${$greenInputNumber})`);
+    }
+    $(".form-control").on("change", changeBackgroundColor);
+
+//7
+    function deleteImg(evt) {
+      $(evt.target).remove();
+    }
+    $("body").on("click", "img", deleteImg);
+
+  </script>
 </body>
 
 </html>
